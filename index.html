@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WHS Track & Field Attendance</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__title">
+          <h1>WHS Track &amp; Field Attendance</h1>
+          <p class="muted">Toggle attendance and submit the whole day at once.</p>
+        </div>
+
+        <div class="header__actions">
+          <label class="field">
+            <span class="field__label">Date</span>
+            <input id="dateInput" type="date" />
+          </label>
+
+          <button id="markAllYesBtn" class="btn btn--secondary" type="button">
+            Mark all Yes
+          </button>
+          <button id="markAllNoBtn" class="btn btn--secondary" type="button">
+            Mark all No
+          </button>
+          <button id="submitBtn" class="btn btn--primary" type="button">
+            Submit
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel">
+        <div class="panel__row">
+          <label class="field field--grow">
+            <span class="field__label">Search</span>
+            <input id="searchInput" type="search" placeholder="Name, grade, group..." />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Group</span>
+            <select id="groupFilter">
+              <option value="">All</option>
+            </select>
+          </label>
+
+          <div class="stats" aria-live="polite">
+            <div><span class="muted">Yes:</span> <span id="yesCount">0</span></div>
+            <div><span class="muted">No:</span> <span id="noCount">0</span></div>
+          </div>
+        </div>
+
+        <div id="statusBanner" class="banner hidden" role="status"></div>
+
+        <div class="tableWrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Athlete</th>
+                <th class="colSmall">Grade</th>
+                <th class="colMed">Group</th>
+                <th class="colSmall">Status</th>
+              </tr>
+            </thead>
+            <tbody id="rosterBody">
+              <tr>
+                <td colspan="4" class="muted">Loading roster...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="passwordDialog" class="dialog">
+      <form method="dialog" class="dialog__form">
+        <h2 class="dialog__title">Submit Attendance</h2>
+        <p class="muted dialog__subtitle">
+          Enter the submit password to send attendance to the Google Sheet.
+        </p>
+
+        <label class="field">
+          <span class="field__label">Password</span>
+          <input id="passwordInput" type="password" autocomplete="current-password" />
+        </label>
+
+        <div class="dialog__actions">
+          <button class="btn btn--secondary" value="cancel" type="submit">Cancel</button>
+          <button id="confirmSubmitBtn" class="btn btn--primary" value="submit" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
