@@ -1,7 +1,7 @@
 // === Configuration ===
 // 1) Deploy your Google Apps Script as a Web App, then paste the "Web app URL" below.
 // 2) The UI will ask for a password at submit-time; Apps Script must validate it server-side.
-const APPS_SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbz--fmOa-gfTxxtCORtQSlnVJfCYwMxdpQ8rD4xWOdBz6Ml-BeS_-9vcfei4yLf42go/exec";
+const APPS_SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzrf9xvXk3yBs7i6cxjWK6BOYGlxzKV9ZAx2jdiZ77DH2soZUbo5U0ELj04YmYD_Rp4/exec";
 
 const ROSTER_URL = "./roster.json";
 
