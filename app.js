@@ -76,7 +76,7 @@ function uniqueGroups(athletes) {
 
 function initAttendanceDefaults() {
   attendanceById = new Map();
-  for (const a of roster) attendanceById.set(a.id, false); // default Yes for speed
+  for (const a of roster) attendanceById.set(a.id, false); // default No
 }
 
 function applyFilters() {
